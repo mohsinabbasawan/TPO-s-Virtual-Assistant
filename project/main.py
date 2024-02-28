@@ -19,10 +19,22 @@ import json
 local_server = True
 app = Flask(__name__)
 app.secret_key = "sayali"
-userpass = 'mysql+pymysql://root:@'
+userpass = 'mysql+pymysql://root:root@'
 basedir  = 'localhost'
 dbname   = '/placement'
-socket   = ''
+socket   = 'mysql_socket'
+
+
+#userpass = 'mysql+pymysql://username:password@'
+#basedir  = 'hostname'
+#dbname   = '/placement'
+#socket   = ''  # Usually not needed for local connections
+
+
+
+
+
+
 
 
 with open('config.json','r') as c:
